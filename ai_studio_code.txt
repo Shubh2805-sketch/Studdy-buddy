@@ -1,0 +1,27 @@
+flutter_project/
+├── pubspec.yaml                     # Dependencies (Material 3, Google GenAI, TTS, Camera, KaTeX math)
+├── README.md                        # Setup and build guide
+├── analysis_options.yaml            # Linter rules
+├── lib/
+│   ├── main.dart                    # App entry & Dark Material 3 theme configuration
+│   ├── models/
+│   │   ├── explanation.dart         # Data schemas for NCERT lessons & MCQ checkpoints
+│   │   └── user_stats.dart          # XP & subject mastery models
+│   ├── services/
+│   │   └── gemini_service.dart      # Gemini AI client for question generation & OCR
+│   ├── screens/
+│   │   ├── home_screen.dart         # Main feed & prompt bar
+│   │   ├── camera_scan_screen.dart  # Camera viewfinder for textbook question scanning
+│   │   ├── formula_vault_screen.dart# Class 12 formula repository
+│   │   ├── revision_screen.dart     # 5-minute rapid flashcard revision
+│   │   └── stats_screen.dart        # Score & XP progression tracker
+│   └── widgets/
+│       └── question_card.dart       # Interactive 1-tap MCQ test checkpoint card
+├── android/
+│   ├── app/
+│   │   ├── build.gradle             # Configured for Android 13+ (minSdk 33, targetSdk 34)
+│   │   └── src/main/AndroidManifest.xml # Permissions for Camera, Audio & Internet
+│   ├── build.gradle
+│   └── settings.gradle
+└── ios/
+    └── Runner/Info.plist            # iOS permissions for camera and microphone
